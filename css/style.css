@@ -1,0 +1,47 @@
+/* -------------------- */
+/* RESET */
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------- */
+/* COMMON */
+
+.container {
+  max-width: 990px;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------- */
+/* SLIDER */
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-images {
+  padding: 5%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.slider-images img {
+  display: none;
+}
+
+.slider-images .active {
+  display: block;
+}
+
+.arrow {
+  font-size: 35px;
+}
