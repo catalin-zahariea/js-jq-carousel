@@ -15,10 +15,15 @@ arrowRight.click(function () {
   var activeImg = $(".slider-images .active");
   activeImg.removeClass("active");
 
+  var activePointer = $(".slider-pointer .active-pointer");
+  activePointer.removeClass("active-pointer");
+
   if (activeImg.hasClass("last")) {
     $(".slider-images .first").addClass("active");
+    $(".slider-pointer .first").addClass("active-pointer");
   } else {
     activeImg.next().addClass("active");
+    activePointer.next().addClass("active-pointer");
   }
 
   var activeRight = $(".slider-images .right-side");
@@ -49,10 +54,15 @@ arrowLeft.click(function () {
   var activeImg = $(".slider-images .active");
   activeImg.removeClass("active");
 
+  var activePointer = $(".slider-pointer .active-pointer");
+  activePointer.removeClass("active-pointer");
+
   if (activeImg.hasClass("first")) {
     $(".slider-images .last").addClass("active");
+    $(".slider-pointer .last").addClass("active-pointer");
   } else {
     activeImg.prev().addClass("active");
+    activePointer.prev().addClass("active-pointer");
   }
 
   var activeRight = $(".slider-images .right-side");

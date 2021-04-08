@@ -30,6 +30,7 @@ img {
 
 .slider-images {
   padding: 5%;
+  position: relative;
 }
 
 .slider-images .image {
@@ -49,6 +50,29 @@ img {
 .arrow i {
   font-size: 35px;
   transition: all 0.5s;
+}
+
+.slider-images .slider-pointer {
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  margin: -5px;
+}
+
+.slider-images .slider-pointer li {
+  display: inline-block;
+  height: 2px;
+  border-radius: 5px;
+  width: 30px;
+  background-color: #fff;
+  opacity: 50%;
+  text-align: center;
+  margin: 5px;
 }
 
 /* -------------------- */
@@ -83,6 +107,11 @@ img {
 
 .arrow:active i {
   opacity: 0.8;
+}
+
+.slider-images .slider-pointer .active-pointer {
+  opacity: 1;
+  height: 4px;
 }
 
 /* -------------------- */
