@@ -6,26 +6,37 @@
 // -------------------------------
 
 // Making the arrows clickable and assigning the function to sroll.
-//-------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // RIGHT ARROW
-// -------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 
 var arrowRight = $(".arrow.right");
 arrowRight.click(function () {
   var activeImg = $(".slider-images .active");
   activeImg.removeClass("active");
 
+  //-------------------------------
+  // TOP POINTER
   var activePointer = $(".slider-pointer .active-pointer");
   activePointer.removeClass("active-pointer");
 
   if (activeImg.hasClass("last")) {
     $(".slider-images .first").addClass("active");
+    //-------------------------------
+    // TOP POINTER
     $(".slider-pointer .first").addClass("active-pointer");
   } else {
     activeImg.next().addClass("active");
+    //-------------------------------
+    // TOP POINTER
     activePointer.next().addClass("active-pointer");
   }
 
+  //-------------------------------
+  // RIGHT SIDE
+  // -------------------------------
   var activeRight = $(".slider-images .right-side");
   activeRight.removeClass("right-side");
 
@@ -35,6 +46,9 @@ arrowRight.click(function () {
     activeRight.next().addClass("right-side");
   }
 
+  //-------------------------------
+  // LEFT SIDE
+  // -------------------------------
   var activeLeft = $(".slider-images .left-side");
   activeLeft.removeClass("left-side");
 
@@ -45,26 +59,37 @@ arrowRight.click(function () {
   }
 });
 
-//-------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // LEFT ARROW
-// -------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 
 var arrowLeft = $(".arrow.left");
 arrowLeft.click(function () {
   var activeImg = $(".slider-images .active");
   activeImg.removeClass("active");
 
+  //-------------------------------
+  // TOP POINTER
   var activePointer = $(".slider-pointer .active-pointer");
   activePointer.removeClass("active-pointer");
 
   if (activeImg.hasClass("first")) {
     $(".slider-images .last").addClass("active");
+    //-------------------------------
+    // TOP POINTER
     $(".slider-pointer .last").addClass("active-pointer");
   } else {
     activeImg.prev().addClass("active");
+    //-------------------------------
+    // TOP POINTER
     activePointer.prev().addClass("active-pointer");
   }
 
+  //-------------------------------
+  // RIGHT SIDE
+  // -------------------------------
   var activeRight = $(".slider-images .right-side");
   activeRight.removeClass("right-side");
 
@@ -74,6 +99,9 @@ arrowLeft.click(function () {
     activeRight.prev().addClass("right-side");
   }
 
+  //-------------------------------
+  // LEFT SIDE
+  // -------------------------------
   var activeLeft = $(".slider-images .left-side");
   activeLeft.removeClass("left-side");
 
