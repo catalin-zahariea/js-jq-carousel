@@ -30,18 +30,65 @@ img {
 
 .slider-images {
   padding: 5%;
-  height: 500px;
-  object-fit: contain;
 }
 
-.slider-images img {
+.slider-images .image {
+  position: relative;
+}
+
+.slider-images .image img {
   display: none;
 }
 
-.slider-images .active {
+.slider-images .image .active {
   display: block;
+  height: 500px;
+  object-fit: cover;
 }
 
-.arrow {
+.arrow i {
   font-size: 35px;
+  transition: all 0.5s;
+}
+
+/* -------------------- */
+/* SLIDER SIDES */
+
+.slider-images .image .right-side {
+  display: block;
+  position: absolute;
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+  left: 100%;
+  bottom: 0%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.slider-images .image .left-side {
+  display: block;
+  position: absolute;
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+  right: 100%;
+  bottom: 0%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+/* -------------------- */
+/* ACTIVE */
+
+.arrow:active i {
+  opacity: 0.8;
+}
+
+/* -------------------- */
+/* HOVER */
+
+.arrow:hover i {
+  text-shadow: 0px 0px 2px rgba(90, 90, 158, 0.2);
+  transform: scale(1.1);
 }
